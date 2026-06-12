@@ -132,10 +132,6 @@
         ${renderGuideSection("被克制关系", guide.counteredBy)}
         ${renderGuideSection("新手提醒", guide.tips)}
       </div>
-      <div class="official-actions">
-        <a href="${hero.officialLinks.website || createOfficialSearchUrl(hero.name)}" target="_blank" rel="noreferrer">官网查询</a>
-        <a href="${hero.officialLinks.camp}" target="_blank" rel="noreferrer">王者营地</a>
-      </div>
     `;
 
     dialog.showModal();
@@ -188,7 +184,6 @@
   }
 
   window.filterHeroes = filterHeroes;
-  window.createOfficialSearchUrl = createOfficialSearchUrl;
   window.openHeroGuide = openHero;
 
   if (document.readyState === "loading") {
