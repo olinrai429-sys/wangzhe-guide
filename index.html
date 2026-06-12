@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>王者荣耀攻略搜索门户</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand-mark">王</div>
+      <div>
+        <p class="eyebrow">Honor of Kings Guide Portal</p>
+        <h1>王者荣耀攻略搜索门户</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="search-panel" aria-label="英雄攻略搜索">
+        <label for="heroSearch">搜索英雄、分路、职业或打法关键词</label>
+        <div class="search-row">
+          <input id="heroSearch" type="search" autocomplete="off" placeholder="例如：孙悟空、打野、射手、团战">
+          <button id="clearSearch" type="button" aria-label="清空搜索">清空</button>
+        </div>
+        <div id="laneFilters" class="chip-row" aria-label="分路筛选"></div>
+      </section>
+
+      <section class="result-head">
+        <div>
+          <p class="eyebrow">首批热门英雄</p>
+          <h2>完整攻略库</h2>
+        </div>
+        <span id="resultCount">0 个结果</span>
+      </section>
+
+      <section id="heroGrid" class="hero-grid" aria-live="polite"></section>
+      <section id="emptyState" class="empty-state" hidden>
+        <h2>没有找到匹配英雄</h2>
+        <p>换一个英雄名、分路或攻略关键词试试。</p>
+      </section>
+    </main>
+
+    <dialog id="heroDialog" class="hero-dialog" aria-label="英雄完整攻略">
+      <button id="closeDialog" class="dialog-close" type="button" aria-label="关闭攻略">×</button>
+      <div id="heroDetail"></div>
+    </dialog>
+
+    <script src="data/heroes.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
